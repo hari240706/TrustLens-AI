@@ -1,0 +1,123 @@
+.navbar-container {
+  position: fixed;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: var(--z-navbar);
+}
+
+.navbar-pill {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  padding: 1rem 3rem;
+  border-radius: 50px;
+  cursor: default;
+}
+
+.navbar-pill:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  font-family: var(--font-display);
+  letter-spacing: 0.5px;
+}
+
+.nav-link:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 700;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: white;
+  text-shadow: 0 0 10px rgba(255,255,255,0.3);
+}
+
+/* Hero Section */
+.hero-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  z-index: var(--z-hero);
+  padding: 2rem;
+  padding-top: 8rem; /* Space for navbar */
+}
+
+.hero-title {
+  font-size: 5vw;
+  font-weight: 800;
+  font-family: var(--font-display);
+  letter-spacing: -1.5px;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+  /* Glowing colorful look */
+  text-shadow: 0 0 20px rgba(0, 255, 204, 0.4), 0 0 40px rgba(0, 153, 255, 0.2);
+  background: linear-gradient(135deg, #00ffcc 0%, #0099ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+}
+
+.search-box-wrapper {
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+  border-radius: 16px;
+}
+
+.search-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.125rem;
+  font-family: monospace;
+  outline: none;
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.search-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: white;
+  padding: 0.8rem 2.5rem;
+  border-radius: 12px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.search-btn:hover {
+  background: white;
+  color: black;
+  box-shadow: 0 0 20px rgba(255,255,255,0.4);
+}
+.cursor-blink { animation: blink 1s step-end infinite; } @keyframes blink { 50% { opacity: 0; } }

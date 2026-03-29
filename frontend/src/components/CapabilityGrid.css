@@ -1,0 +1,71 @@
+.capability-grid-section {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  z-index: var(--z-base);
+  position: relative;
+}
+
+.capability-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  perspective: 1000px;
+}
+
+/* 
+  Container hover dimming effect: 
+  When the grid is hovered, dim all cards slightly.
+  The specifically hovered card will override this dimming.
+*/
+.capability-grid:hover .capability-card {
+  opacity: 0.5;
+  filter: blur(2px);
+  transform: scale(0.95);
+}
+
+.capability-card {
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.capability-card:hover {
+  opacity: 1 !important;
+  filter: blur(0) !important;
+  transform: scale(1.05) translateZ(40px) !important;
+  box-shadow: 0 10px 40px var(--glow-cyan), inset 0 0 15px rgba(255,255,255,0.05);
+  border-color: rgba(255,255,255,0.3);
+  z-index: 10;
+}
+
+.card-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.card-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+}
+
+.card-desc {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.5;
+}
